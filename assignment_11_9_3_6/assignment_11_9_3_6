@@ -64,6 +64,74 @@ Let $a,b,c$ be any three consecutive terms of a GP whose common difference is $r
 \\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\, \notag\\
 x^2&=(-\frac{2}{7}\,)\cdot(-\frac{7}{2}\,)\notag\\
 x^2&=1\notag\\
-x&=1,-1\notag
+x&=1,-1\notag\\
+r&=\frac{x}{(-\frac{2}{7}\,)}\notag\\
+\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\notag
+\end{align}
+Assuming $-\frac{2}{7}\,$ as the first term of the GP, The possible general term of the GP are \\
+\begin{align}
+T_n&=-\frac{2}{7}\,\cdot(-\frac{7}{2}\,)^{n-1}  \text{ or } -\frac{2}{7}\,\cdot(\frac{7}{2}\,)^{n-1}\notag\\
+T_n&=(-\frac{7}{2}\,)^{n-2}  \text{ or } -(\frac{7}{2}\,)^{n-2}\notag
+\end{align}
+The signal corresponding to this is 
+\begin{align}
+x(n)&=(-\frac{7}{2}\,)^{n-2}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-2}\,u(n)\notag
+\end{align}
+\textbf{Applying z-Transform:}\\
+case -1 : 
+\begin{align}
+X(z)&=\sum_{n=-\infty}^{\infty}((-\frac{7}{2}\,)^{n-2}\,u(n)\,)\,z^{-n}\notag\\
+X(z)&=0+\sum_{n=1}^{\infty}((-\frac{7}{2}\,)^{n-2})\,z^{-n}\notag\\
+X(z)&=\sum_{n=1}^{\infty}((\frac{4}{49})(-\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
+(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
+(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
+\end{align}
+For this to converge $|\frac{7}{2z}\,|<1$
+\begin{align}
+\implies -1<\frac{7}{2z}<1 \notag\\
+z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)\notag
+\end{align}
+Multiplying $-\frac{7}{2z}$ on both sides of equation 1
+\begin{align}
+-(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-(n+1)})\,\notag\\
+-(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=2}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\notag\\ 
+-(\frac{7}{2z})(\frac{49}{4})X(z)&=-(-\frac{2z}{7}\,)^{-1}+\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\notag\\
+-(\frac{7}{2z})(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)+\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
+\end{align}
+Subtracting eqn 1 from eqn 2
+\begin{align}
+-(\frac{7}{2z}+1)(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)\notag
+\end{align}
+\begin{align}
+X(z)&=-(\frac{4}{49})(\frac{7}{2z}\,)(\frac{2z}{2z+7})\notag\\
+\implies X(z)&=-(\frac{4}{7})(\frac{1}{2z+7}\,)
+\end{align}
+case -2 : 
+\begin{align}
+X(z)&=\sum_{n=-\infty}^{\infty}(-(\frac{7}{2}\,)^{n-2}\,u(n)\,)\,z^{-n}\notag\\
+X(z)&=0+\sum_{n=1}^{\infty}-((\frac{7}{2}\,)^{n-2})\,z^{-n}\notag\\
+X(z)&=\sum_{n=1}^{\infty}-((\frac{4}{49})(\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
+(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
+(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
+\end{align}
+For this to converge $|\frac{7}{2z}\,|<1$
+\begin{align}
+\implies -1<\frac{7}{2z}<1 \notag\\
+z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)\notag
+\end{align}
+Multiplying $\frac{7}{2z}$ on both sides of equation 4
+\begin{align}
+(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-(n+1)})\,\notag\\
+(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=2}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\notag\\ 
+(\frac{7}{2z})(\frac{49}{4})X(z)&=-(-\frac{2z}{7}\,)^{-1}+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\notag\\
+(\frac{7}{2z})(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
+\end{align}
+Subtracting eqn 4 from eqn 5
+\begin{align}
+(\frac{7}{2z}-1)(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)\notag
+\end{align}
+\begin{align}
+X(z)&=(\frac{4}{49})(\frac{7}{2z}\,)(\frac{2z}{7-2z})\notag\\
+\implies X(z)&=(\frac{4}{7})(\frac{1}{7-2z}\,)
 \end{align}
 \end{document}
