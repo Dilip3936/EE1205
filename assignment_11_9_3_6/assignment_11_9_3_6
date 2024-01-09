@@ -1,3 +1,4 @@
+% \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -6,6 +7,7 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage[justification=centering]{caption}
 \usepackage{xcolor}
 \usepackage{txfonts}
 \usepackage{listings}
@@ -60,78 +62,92 @@ For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \textbf{Solution: }\\
 Let $a,b,c$ be any three consecutive terms of a GP whose common difference is $r$ then,
 \begin{align}
-\implies\frac{b}{a}\,&=\frac{c}{b}\,=r\notag
-\\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\, \notag\\
-x^2&=(-\frac{2}{7}\,)\cdot(-\frac{7}{2}\,)\notag\\
-x^2&=1\notag\\
-x&=1,-1\notag\\
-r&=\frac{x}{(-\frac{2}{7}\,)}\notag\\
-\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\notag
-\end{align}
-Assuming $-\frac{2}{7}\,$ as the first term of the GP, The possible general term of the GP are \\
-\begin{align}
-T_n&=-\frac{2}{7}\,\cdot(-\frac{7}{2}\,)^{n-1}  \text{ or } -\frac{2}{7}\,\cdot(\frac{7}{2}\,)^{n-1}\notag\\
-T_n&=(-\frac{7}{2}\,)^{n-2}  \text{ or } -(\frac{7}{2}\,)^{n-2}\notag
+\implies\frac{b}{a}\,&=\frac{c}{b}\,=r
+\\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\, \\
+x^2&=(-\frac{2}{7}\,)\cdot(-\frac{7}{2}\,)\\
+x^2&=1\\
+x&=1,-1\\
+r&=\frac{x}{(-\frac{2}{7}\,)}\\
+\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\\
+T_n&=-\frac{2}{7}\,\cdot(-\frac{7}{2}\,)^{n}  \text{ or } -\frac{2}{7}\,\cdot(\frac{7}{2}\,)^{n}\\
+T_n&=(-\frac{7}{2}\,)^{n-1}  \text{ or } -(\frac{7}{2}\,)^{n-1} 
 \end{align}
 The signal corresponding to this is 
 \begin{align}
-x(n)&=(-\frac{7}{2}\,)^{n-2}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-2}\,u(n)\notag
+x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
 \end{align}
+\begin{figure}[h]
+    \renewcommand\thefigure{1}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
+    \caption{Stem Plot of x(n)}
+    \label{stemplot1}
+\end{figure}
+\begin{figure}[h]
+    \renewcommand\thefigure{1}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
+    \caption{Stem Plot of x(n)}
+    \label{stemplot2}
+\end{figure}
+\newpage
 \textbf{Applying z-Transform:}\\
 case -1 : 
 \begin{align}
-X(z)&=\sum_{n=-\infty}^{\infty}((-\frac{7}{2}\,)^{n-2}\,u(n)\,)\,z^{-n}\notag\\
-X(z)&=0+\sum_{n=1}^{\infty}((-\frac{7}{2}\,)^{n-2})\,z^{-n}\notag\\
-X(z)&=\sum_{n=1}^{\infty}((\frac{4}{49})(-\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
-(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
-(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
+X(z)&=\sum_{n=-\infty}^{\infty}((-\frac{7}{2}\,)^{n-1}\,u(n)\,)\,z^{-n}\\
+X(z)&=0+\sum_{n=0}^{\infty}((-\frac{7}{2}\,)^{n-1})\,z^{-n}\\
+X(z)&=\sum_{n=0}^{\infty}((\ frac{2}{7})(-\frac{2}{7}\,)^{-n})\,z^{-n}\\
+(\frac{2}{7})X(z)&=\sum_{n=0}^{\infty}((-\frac{2}{7}\,)^{-n})\,z^{-n}\\
+(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
 \end{align}
 For this to converge $|\frac{7}{2z}\,|<1$
 \begin{align}
-\implies -1<\frac{7}{2z}<1 \notag\\
-z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)\notag
+\implies -1<\frac{7}{2z}<1 \\
+z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)
 \end{align}
-Multiplying $-\frac{7}{2z}$ on both sides of equation 1
+Multiplying $-\frac{7}{2z}$ on both sides of equation 15
 \begin{align}
--(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-(n+1)})\,\notag\\
--(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=2}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\notag\\ 
--(\frac{7}{2z})(\frac{49}{4})X(z)&=-(-\frac{2z}{7}\,)^{-1}+\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\notag\\
--(\frac{7}{2z})(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)+\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
+-(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-(n+1)})\,\\
+-(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\\ 
+-(\frac{7}{2z})(\frac{7}{2})X(z)&=-(-\frac{2z}{7}\,)^{-0}+\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\\
+-(\frac{7}{2z})(\frac{7}{2})X(z)&=-1+\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
 \end{align}
-Subtracting eqn 1 from eqn 2
+Subtracting eqn 15 from eqn 21
 \begin{align}
--(\frac{7}{2z}+1)(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)\notag
+(\frac{7}{2z}+1)(\frac{7}{2})X(z)&=1
 \end{align}
 \begin{align}
-X(z)&=-(\frac{4}{49})(\frac{7}{2z}\,)(\frac{2z}{2z+7})\notag\\
-\implies X(z)&=-(\frac{4}{7})(\frac{1}{2z+7}\,)
+X(z)&=(\frac{2}{7})(\frac{2z}{2z+7})\\
+\implies X(z)&=(\frac{1}{7})(\frac{4z}{2z+7}\,)
 \end{align}
 case -2 : 
 \begin{align}
-X(z)&=\sum_{n=-\infty}^{\infty}(-(\frac{7}{2}\,)^{n-2}\,u(n)\,)\,z^{-n}\notag\\
-X(z)&=0+\sum_{n=1}^{\infty}-((\frac{7}{2}\,)^{n-2})\,z^{-n}\notag\\
-X(z)&=\sum_{n=1}^{\infty}-((\frac{4}{49})(\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
-(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2}{7}\,)^{-n})\,z^{-n}\notag\\
-(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
+X(z)&=\sum_{n=-\infty}^{\infty}(-(\frac{7}{2}\,)^{n-1}\,u(n)\,)\,z^{-n}\\
+X(z)&=0+\sum_{n=0}^{\infty}-((\frac{7}{2}\,)^{n-1})\,z^{-n}\\
+X(z)&=\sum_{n=1}^{\infty}-((\frac{2}{7})(\frac{2}{7}\,)^{-n})\,z^{-n}\\
+(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2}{7}\,)^{-n})\,z^{-n}\\
+(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
 \end{align}
 For this to converge $|\frac{7}{2z}\,|<1$
 \begin{align}
-\implies -1<\frac{7}{2z}<1 \notag\\
-z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)\notag
+\implies -1<\frac{7}{2z}<1 \\
+z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)
 \end{align}
-Multiplying $\frac{7}{2z}$ on both sides of equation 4
+Multiplying $\frac{7}{2z}$ on both sides of equation 29
 \begin{align}
-(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-(n+1)})\,\notag\\
-(\frac{7}{2z})(\frac{49}{4})X(z)&=\sum_{n=2}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\notag\\ 
-(\frac{7}{2z})(\frac{49}{4})X(z)&=-(-\frac{2z}{7}\,)^{-1}+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\notag\\
-(\frac{7}{2z})(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
+(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2z}{7}\,)^{-(n+1)})\,\\
+(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\\ 
+(\frac{7}{2z})(\frac{7}{2})X(z)&=-(-1)^{-1}+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\\
+(\frac{7}{2z})(\frac{7}{2})X(z)&=1+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
 \end{align}
-Subtracting eqn 4 from eqn 5
+Subtracting eqn 29 from eqn 35
 \begin{align}
-(\frac{7}{2z}-1)(\frac{49}{4})X(z)&=(\frac{7}{2z}\,)\notag
+(\frac{7}{2z}-1)(\frac{7}{2})X(z)&=1
 \end{align}
 \begin{align}
-X(z)&=(\frac{4}{49})(\frac{7}{2z}\,)(\frac{2z}{7-2z})\notag\\
-\implies X(z)&=(\frac{4}{7})(\frac{1}{7-2z}\,)
+X(z)&=(\frac{2}{7})(\frac{2z}{7-2z})\\
+\implies X(z)&=(\frac{1}{7})(\frac{4z}{7-2z}\,)
 \end{align}
 \end{document}
