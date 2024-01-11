@@ -60,18 +60,17 @@
 For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \\\\
 \textbf{Solution: }\\
-Let $a,b,c$ be any three consecutive terms of a GP whose common difference is $r$ then,
+Let $r$ be the common ratio
 \begin{align}
-\implies\frac{b}{a}\,&=\frac{c}{b}\,=r
-\\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\, \\
+\\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\,=r \\
 x^2&=(-\frac{2}{7}\,)\cdot(-\frac{7}{2}\,)\\
 x^2&=1\\
-x&=1,-1\\
+x&=1,-1\\\notag\\
 r&=\frac{x}{(-\frac{2}{7}\,)}\\
-\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\\
+\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\\\notag\\
 T_n&=-\frac{2}{7}\,\cdot(-\frac{7}{2}\,)^{n}  \text{ or } -\frac{2}{7}\,\cdot(\frac{7}{2}\,)^{n}\\
 T_n&=(-\frac{7}{2}\,)^{n-1}  \text{ or } -(\frac{7}{2}\,)^{n-1} 
-\end{align}
+\end{align}\\
 The signal corresponding to this is 
 \begin{align}
 x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
@@ -83,11 +82,11 @@ x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
     \hline
     \textbf{Variable} & \textbf{Description} &\textbf{Value}\\ 
     \hline
-    $a_0$ & First term of the GP &$-(2/7)$ \\
+    $x(0)$ & First term of the GP &$-(\frac{2}{7})$ \\
     \hline 
-    $r$ & Common ratio of the GP & $-(7/2)\, or \,(7/2)$ \\
+    $r$ & Common ratio of the GP & $-(\frac{7}{2})\, or \,(\frac{7}{2})$ \\
     \hline
-    $x(n)$ & General term & $(-7/2)^{n-1}  \text{ or } -(7/2)^{n-1}$\\
+    $x(n)$ & General term & $(-\frac{7}{2}\,)^{n-1}u(n)$   or $ -(\frac{7}{2})^{n-1}u(n)$\\
     \hline    
     \end{tabular}
     \caption{Variables Used}
