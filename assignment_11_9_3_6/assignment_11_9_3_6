@@ -62,18 +62,19 @@ For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \textbf{Solution: }\\
 Let $r$ be the common ratio
 \begin{align}
-\\\implies \frac{x}{(-\frac{2}{7}\,)}\,&= \frac{(-\frac{7}{2}\,)}{x}\,=r \\
-x^2&=(-\frac{2}{7}\,)\cdot(-\frac{7}{2}\,)\\
+\\\implies \frac{x}{\brak{-\frac{2}{7}\,}}\,&= \frac{\brak{-\frac{7}{2}\,}}{x}\,=r \\
+x^2&=\brak{-\frac{2}{7}\,}\cdot\brak{-\frac{7}{2}\,}\\
 x^2&=1\\
 x&=1,-1\\\notag\\
-r&=\frac{x}{(-\frac{2}{7}\,)}\\
-\implies r&=\frac{7}{2}\,or -\frac{7}{2}\,\\\notag\\
-T_n&=-\frac{2}{7}\,\cdot(-\frac{7}{2}\,)^{n}  \text{ or } -\frac{2}{7}\,\cdot(\frac{7}{2}\,)^{n}\\
-T_n&=(-\frac{7}{2}\,)^{n-1}  \text{ or } -(\frac{7}{2}\,)^{n-1} 
+r&=\frac{x}{\brak{-\frac{2}{7}\,}}\\
+\implies r&=\frac{7}{2}\,\text{or} -\frac{7}{2}\,\\\notag\\
+T_n&=-\frac{2}{7}\,\cdot\brak{-\frac{7}{2}\,}^{n}  \text{ or } -\frac{2}{7}\,\cdot\brak{\frac{7}{2}\,}^{n}\\
+T_n&=\brak{-\frac{7}{2}\,}^{n-1}  \text{ or } -\brak{\frac{7}{2}\,}^{n-1} 
 \end{align}\\
 The signal corresponding to this is 
 \begin{align}
-x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
+x_1(n)&=\brak{-\frac{7}{2}\,}^{n-1}\,u(n)\,\\
+x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
 \end{align}
 \begin{table}[h]
     \centering
@@ -82,11 +83,11 @@ x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
     \hline
     \textbf{Variable} & \textbf{Description} &\textbf{Value}\\ 
     \hline
-    $x(0)$ & First term of the GP &$-(\frac{2}{7})$ \\
+    $x(0)$ & First term of the GP &$-\brak{\frac{2}{7}}$ \\
     \hline 
-    $r$ & Common ratio of the GP & $-(\frac{7}{2})\, or \,(\frac{7}{2})$ \\
+    $r$ & Common ratio of the GP &  \\
     \hline
-    $x(n)$ & General term & $(-\frac{7}{2}\,)^{n-1}u(n)$   or $ -(\frac{7}{2})^{n-1}u(n)$\\
+    $x(n)$ & General term & \\
     \hline    
     \end{tabular}
     \caption{Variables Used}
@@ -95,74 +96,27 @@ x(n)&=(-\frac{7}{2}\,)^{n-1}\,u(n)\,  \text{ or } -(\frac{7}{2}\,)^{n-1}\,u(n)
     \renewcommand\thefigure{1}
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
-    \caption{Stem Plot of x(n)}
+    \includegraphics[width=1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
+    \caption{Stem Plot of $x_1$(n)}
     \label{stemplot1}
 \end{figure}
 \begin{figure}[h]
-    \renewcommand\thefigure{1}
+    \renewcommand\thefigure{2}
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
-    \caption{Stem Plot of x(n)}
+    \includegraphics[width=1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
+    \caption{Stem Plot of $x_2(n)$}
     \label{stemplot2}
 \end{figure}
 \newpage
 \textbf{Applying z-Transform:}\\
-case -1 : 
 \begin{align}
-X(z)&=\sum_{n=-\infty}^{\infty}((-\frac{7}{2}\,)^{n-1}\,u(n)\,)\,z^{-n}\\
-X(z)&=0+\sum_{n=0}^{\infty}((-\frac{7}{2}\,)^{n-1})\,z^{-n}\\
-X(z)&=\sum_{n=0}^{\infty}((\ frac{2}{7})(-\frac{2}{7}\,)^{-n})\,z^{-n}\\
-(\frac{2}{7})X(z)&=\sum_{n=0}^{\infty}((-\frac{2}{7}\,)^{-n})\,z^{-n}\\
-(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
-\end{align}
-For this to converge $|\frac{7}{2z}\,|<1$
-\begin{align}
-\implies -1<\frac{7}{2z}<1 \\
-z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)
-\end{align}
-Multiplying $-\frac{7}{2z}$ on both sides of equation 15
-\begin{align}
--(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-(n+1)})\,\\
--(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=1}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\\ 
--(\frac{7}{2z})(\frac{7}{2})X(z)&=-(-\frac{2z}{7}\,)^{-0}+\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,\\
--(\frac{7}{2z})(\frac{7}{2})X(z)&=-1+\sum_{n=0}^{\infty}((-\frac{2z}{7}\,)^{-n})\,
-\end{align}
-Subtracting eqn 15 from eqn 21
-\begin{align}
-(\frac{7}{2z}+1)(\frac{7}{2})X(z)&=1
+\text{ROC : }\,z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}
 \end{align}
 \begin{align}
-X(z)&=(\frac{2}{7})(\frac{2z}{2z+7})\\
-\implies X(z)&=(\frac{1}{7})(\frac{4z}{2z+7}\,)
-\end{align}
-case -2 : 
-\begin{align}
-X(z)&=\sum_{n=-\infty}^{\infty}(-(\frac{7}{2}\,)^{n-1}\,u(n)\,)\,z^{-n}\\
-X(z)&=0+\sum_{n=0}^{\infty}-((\frac{7}{2}\,)^{n-1})\,z^{-n}\\
-X(z)&=\sum_{n=1}^{\infty}-((\frac{2}{7})(\frac{2}{7}\,)^{-n})\,z^{-n}\\
-(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2}{7}\,)^{-n})\,z^{-n}\\
-(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
-\end{align}
-For this to converge $|\frac{7}{2z}\,|<1$
-\begin{align}
-\implies -1<\frac{7}{2z}<1 \\
-z \in (-\infty,-\frac{7}{2})\cup(\frac{7}{2},\infty)
-\end{align}
-Multiplying $\frac{7}{2z}$ on both sides of equation 29
-\begin{align}
-(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=0}^{\infty}-((\frac{2z}{7}\,)^{-(n+1)})\,\\
-(\frac{7}{2z})(\frac{7}{2})X(z)&=\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\\ 
-(\frac{7}{2z})(\frac{7}{2})X(z)&=-(-1)^{-1}+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,\\
-(\frac{7}{2z})(\frac{7}{2})X(z)&=1+\sum_{n=1}^{\infty}-((\frac{2z}{7}\,)^{-n})\,
-\end{align}
-Subtracting eqn 29 from eqn 35
-\begin{align}
-(\frac{7}{2z}-1)(\frac{7}{2})X(z)&=1
+\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}
 \end{align}
 \begin{align}
-X(z)&=(\frac{2}{7})(\frac{2z}{7-2z})\\
-\implies X(z)&=(\frac{1}{7})(\frac{4z}{7-2z}\,)
+\implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7-2z}\,}
 \end{align}
 \end{document}
