@@ -68,8 +68,8 @@ x^2&=1\\
 x&=1,-1\\\notag\\
 r&=\frac{x}{\brak{-\frac{2}{7}\,}}\\
 \implies r&=\frac{7}{2}\,\text{or} -\frac{7}{2}\,\\\notag\\
-T_n&=-\frac{2}{7}\,\cdot\brak{-\frac{7}{2}\,}^{n}  \text{ or } -\frac{2}{7}\,\cdot\brak{\frac{7}{2}\,}^{n}\\
-T_n&=\brak{-\frac{7}{2}\,}^{n-1}  \text{ or } -\brak{\frac{7}{2}\,}^{n-1} 
+x_n&=-\frac{2}{7}\,\cdot\brak{-\frac{7}{2}\,}^{n}  \text{ or } -\frac{2}{7}\,\cdot\brak{\frac{7}{2}\,}^{n}\\
+x_n&=\brak{-\frac{7}{2}\,}^{n-1}  \text{ or } -\brak{\frac{7}{2}\,}^{n-1} 
 \end{align}\\
 The signal corresponding to this is 
 \begin{align}
@@ -96,7 +96,7 @@ x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
     \renewcommand\thefigure{1}
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
+    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
     \caption{Stem Plot of $x_1$(n)}
     \label{stemplot1}
 \end{figure}
@@ -104,19 +104,19 @@ x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
     \renewcommand\thefigure{2}
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
+    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
     \caption{Stem Plot of $x_2(n)$}
     \label{stemplot2}
 \end{figure}
 \newpage
-\textbf{Applying z-Transform:}\\
+\textbf{Applying z-Transform :}
 \begin{align}
-\text{ROC : }\,z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}
+	x \brak{n} & \system{Z} X \brak{z} 
 \end{align}
 \begin{align}
-\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}
-\end{align}
-\begin{align}
+X \brak{z} &= \sum_{n=-\infty}^{\infty} x \brak{n}   z^{-n} \\
+\text{ROC : }\,&z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}\notag\\
+\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}\\
 \implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7-2z}\,}
 \end{align}
 \end{document}
