@@ -67,14 +67,21 @@ x^2&=\brak{-\frac{2}{7}\,}\cdot\brak{-\frac{7}{2}\,}\\
 x^2&=1\\
 x&=1,-1\\\notag\\
 r&=\frac{x}{\brak{-\frac{2}{7}\,}}\\
-\implies r&=\frac{7}{2}\,\text{or} -\frac{7}{2}\,\\\notag\\
-x_n&=-\frac{2}{7}\,\cdot\brak{-\frac{7}{2}\,}^{n}  \text{ or } -\frac{2}{7}\,\cdot\brak{\frac{7}{2}\,}^{n}\\
-x_n&=\brak{-\frac{7}{2}\,}^{n-1}  \text{ or } -\brak{\frac{7}{2}\,}^{n-1} 
-\end{align}\\
+\implies r&=\frac{7}{2}\,\text{or} -\frac{7}{2}\,\\\notag
+\end{align}
 The signal corresponding to this is 
 \begin{align}
 x_1(n)&=\brak{-\frac{7}{2}\,}^{n-1}\,u(n)\,\\
 x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
+\end{align}
+\textbf{Applying z-Transform :}
+\begin{align}
+	x \brak{n} & \system{Z} X \brak{z} \notag
+\end{align}
+\begin{align}
+\text{ROC : }\,&z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}\notag\\
+\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}\\
+\implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7-2z}\,}
 \end{align}
 \begin{table}[h]
     \centering
@@ -84,6 +91,8 @@ x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
     \textbf{Variable} & \textbf{Description} &\textbf{Value}\\ 
     \hline
     $x(0)$ & First term of the GP &$-\brak{\frac{2}{7}}$ \\
+    \hline 
+    $x(2)$ & Third term of the GP &$-\brak{\frac{7}{2}}$ \\
     \hline 
     $r$ & Common ratio of the GP &  \\
     \hline
@@ -108,15 +117,4 @@ x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
     \caption{Stem Plot of $x_2(n)$}
     \label{stemplot2}
 \end{figure}
-\newpage
-\textbf{Applying z-Transform :}
-\begin{align}
-	x \brak{n} & \system{Z} X \brak{z} 
-\end{align}
-\begin{align}
-X \brak{z} &= \sum_{n=-\infty}^{\infty} x \brak{n}   z^{-n} \\
-\text{ROC : }\,&z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}\notag\\
-\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}\\
-\implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7-2z}\,}
-\end{align}
 \end{document}
