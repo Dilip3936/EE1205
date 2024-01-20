@@ -60,28 +60,28 @@
 For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \\\\
 \textbf{Solution: }\\
-Let $r$ be the common ratio
+Let $r$ be the common ratio\\
 \begin{align}
-\\\implies \frac{x}{\brak{-\frac{2}{7}\,}}\,&= \frac{\brak{-\frac{7}{2}\,}}{x}\,=r \\
+\text{From \tabref{table_11.9.3.6}:}
+\implies \frac{x}{\brak{-\frac{2}{7}\,}}\,&= \frac{\brak{-\frac{7}{2}\,}}{x}\,=r \\
 x^2&=\brak{-\frac{2}{7}\,}\cdot\brak{-\frac{7}{2}\,}\\
-x^2&=1\\
-x&=1,-1\\\notag\\
-r&=\frac{x}{\brak{-\frac{2}{7}\,}}\\
-\implies r&=\frac{7}{2}\,\text{or} -\frac{7}{2}\,\\\notag
+x&=\pm 1\\
+\implies r&=\pm \frac{7}{2}\,\\\notag
 \end{align}
 The signal corresponding to this is 
 \begin{align}
-x_1(n)&=\brak{-\frac{7}{2}\,}^{n-1}\,u(n)\,\\
-x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
+\text{From \tabref{table_11.9.3.6}:}\,\,
+x(n)=x(0)r^n\,u(n)
 \end{align}
-\textbf{Applying z-Transform :}
+Applying z-Transform :
 \begin{align}
 	x \brak{n} & \system{Z} X \brak{z} \notag
 \end{align}
 \begin{align}
-\text{ROC : }\,&z \in \brak{-\infty,-\frac{7}{2}}\cup\brak{\frac{7}{2},\infty}\notag\\
-\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7+2z}\,}\\
-\implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4z}{7-2z}\,}
+\implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4}{7z^{-1}+2}\,}
+\cbrak{z\in\mathbb{C}: |z|>\frac{7}{2}}\\
+\implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4}{7z^{-1}-2}\,}
+\cbrak{z\in\mathbb{C}: |z|>\frac{7}{2}}
 \end{align}
 \begin{table}[h]
     \centering
@@ -92,14 +92,17 @@ x_2(n)&=-\brak{\frac{7}{2}\,}^{n-1}\,u(n)
     \hline
     $x(0)$ & First term of the GP &$-\brak{\frac{2}{7}}$ \\
     \hline 
+    $x(1)$ & Second term of the GP &$x$ \\
+    \hline 
     $x(2)$ & Third term of the GP &$-\brak{\frac{7}{2}}$ \\
     \hline 
-    $r$ & Common ratio of the GP &  \\
+    $r$ & Common ratio of the GP & $\pm \brak{\frac{7}{2}}$ \\
     \hline
-    $x(n)$ & General term & \\
+    $x(n)$ & General term & $x(0)\,r^n\,u(n)$\\
     \hline    
     \end{tabular}
     \caption{Variables Used}
+    \label{table_11.9.3.6}
 \end{table}
 \begin{figure}[h]
     \renewcommand\thefigure{1}

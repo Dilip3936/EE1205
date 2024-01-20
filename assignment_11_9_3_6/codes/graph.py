@@ -6,7 +6,6 @@ def plot_stem(n_values, x_func, label, filename):
     plt.stem(n_values, y_values, linefmt='-', markerfmt='o', basefmt='r', label=label)
     plt.xlabel('n')
     plt.ylabel("x(n)")
-    plt.title(f"Stem Plot of {label}")
     plt.legend()
     plt.grid(True)
     plt.savefig(filename)
