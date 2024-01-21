@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.1.7)  20 JAN 2024 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.1.7)  21 JAN 2024 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1315,38 +1315,34 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
-
- []
-
-</home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png, id=23, 462.528
-pt x 346.896pt>
+(/home/dilip/Desktop/EE1205/assignment_11_9_3_6/tables/Table.Tex)
+</home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png, id=8, 462.528p
+t x 346.896pt>
 File: /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png Graphic fi
 le (type png)
 <use /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png>
 Package pdftex.def Info: /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/gr
-aph1.png  used on input line 111.
+aph1.png  used on input line 93.
 (pdftex.def)             Requested size: 277.20154pt x 207.91159pt.
 
-Overfull \hbox (25.20154pt too wide) in paragraph at lines 111--112
+Overfull \hbox (25.20154pt too wide) in paragraph at lines 93--94
  [][] 
  []
 
-</home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png, id=25, 462.528
+</home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png, id=10, 462.528
 pt x 346.896pt>
 File: /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png Graphic fi
 le (type png)
 <use /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png>
 Package pdftex.def Info: /home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/gr
-aph2.png  used on input line 119.
+aph2.png  used on input line 101.
 (pdftex.def)             Requested size: 277.20154pt x 207.91159pt.
 
-Overfull \hbox (25.20154pt too wide) in paragraph at lines 119--120
+Overfull \hbox (25.20154pt too wide) in paragraph at lines 101--102
  [][] 
  []
 
@@ -1371,24 +1367,23 @@ Package rerunfilecheck Info: File `assignment_11_9_3_6.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31630 strings out of 474267
- 620560 string characters out of 5749990
- 1949555 words of memory out of 5000000
- 53159 multiletter control sequences out of 15000+600000
+ 31637 strings out of 474267
+ 620963 string characters out of 5749990
+ 1948555 words of memory out of 5000000
+ 53162 multiletter control sequences out of 15000+600000
  628156 words of font info for 179 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,12n,103p,1187b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on assignment_11_9_3_6.pdf (1 page, 73484 bytes).
+nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on assignment_11_9_3_6.pdf (1 page, 70095 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

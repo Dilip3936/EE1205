@@ -61,8 +61,8 @@ For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \\\\
 \textbf{Solution: }\\
 Let $r$ be the common ratio\\
+From \tabref{tab:table_11.9.3.6}:
 \begin{align}
-\text{From \tabref{table_11.9.3.6}:}
 \implies \frac{x}{\brak{-\frac{2}{7}\,}}\,&= \frac{\brak{-\frac{7}{2}\,}}{x}\,=r \\
 x^2&=\brak{-\frac{2}{7}\,}\cdot\brak{-\frac{7}{2}\,}\\
 x&=\pm 1\\
@@ -70,39 +70,21 @@ x&=\pm 1\\
 \end{align}
 The signal corresponding to this is 
 \begin{align}
-\text{From \tabref{table_11.9.3.6}:}\,\,
-x(n)=x(0)r^n\,u(n)
+x(n)=\brak{-\frac{2}{7}}\brak{\pm \frac{7}{2}}^n\,u(n)
 \end{align}
 Applying z-Transform :
 \begin{align}
-	x \brak{n} & \system{Z} X \brak{z} \notag
-\end{align}
-\begin{align}
 \implies X_1(z)&=\brak{\frac{1}{7}}\brak{\frac{4}{7z^{-1}+2}\,}
-\cbrak{z\in\mathbb{C}: |z|>\frac{7}{2}}\\
+\quad \abs{z}>\frac{7}{2}\\
 \implies X_2(z)&=\brak{\frac{1}{7}}\brak{\frac{4}{7z^{-1}-2}\,}
-\cbrak{z\in\mathbb{C}: |z|>\frac{7}{2}}
+\quad \abs{z}>\frac{7}{2}
 \end{align}
 \begin{table}[h]
     \centering
     \renewcommand\thetable{1}
-    \begin{tabular}[12.1pt]{ |c| c| c|}
-    \hline
-    \textbf{Variable} & \textbf{Description} &\textbf{Value}\\ 
-    \hline
-    $x(0)$ & First term of the GP &$-\brak{\frac{2}{7}}$ \\
-    \hline 
-    $x(1)$ & Second term of the GP &$x$ \\
-    \hline 
-    $x(2)$ & Third term of the GP &$-\brak{\frac{7}{2}}$ \\
-    \hline 
-    $r$ & Common ratio of the GP & $\pm \brak{\frac{7}{2}}$ \\
-    \hline
-    $x(n)$ & General term & $x(0)\,r^n\,u(n)$\\
-    \hline    
-    \end{tabular}
+    \input{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/tables/Table.Tex}
     \caption{Variables Used}
-    \label{table_11.9.3.6}
+    \label{tab:table_11.9.3.6}
 \end{table}
 \begin{figure}[h]
     \renewcommand\thefigure{1}
