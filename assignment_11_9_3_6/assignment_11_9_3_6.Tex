@@ -1,4 +1,4 @@
-% \iffalse
+%\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -7,7 +7,6 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
-\usepackage[justification=centering]{caption}
 \usepackage{xcolor}
 \usepackage{txfonts}
 \usepackage{listings}
@@ -60,10 +59,10 @@
 For what values of x, the numbers $-\frac{2}{7}\,,x,-\frac{7}{2}\,$ are in G.P ?
 \\\\
 \textbf{Solution: }\\
+%\fi
 \begin{table}[h]
     \centering
-    \renewcommand\thetable{1}
-    \input{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/tables/Table.Tex}
+    \input{tables/Table.Tex}
     \caption{Variables Used}
     \label{tab:table_11.9.3.6}
 \end{table}
@@ -87,18 +86,14 @@ Applying z-Transform :
 \quad \abs{z}>\frac{7}{2}
 \end{align}
 \begin{figure}[h]
-    \renewcommand\thefigure{1}
     \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph1.png}
+    \includegraphics[width=1.1\linewidth]{figs/graph1.png}
     \caption{Stem Plot of $x_1$(n)}
     \label{stemplot1}
 \end{figure}
 \begin{figure}[h]
-    \renewcommand\thefigure{2}
     \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=1.1\linewidth]{/home/dilip/Desktop/EE1205/assignment_11_9_3_6/figs/graph2.png}
+    \includegraphics[width=1.1\linewidth]{figs/graph2.png}
     \caption{Stem Plot of $x_2(n)$}
     \label{stemplot2}
 \end{figure}
