@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.1.7)  9 FEB 2024 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.1.7)  11 FEB 2024 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1294,13 +1294,51 @@ Overfull \hbox (25.20154pt too wide) in paragraph at lines 64--65
  [][] 
  []
 
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 6
+6.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 6
+6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--69
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 6
+6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 6
+6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
+6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 59--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--69
+Underfull \hbox (badness 10000) in paragraph at lines 59--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--74
 
  []
 
@@ -1318,19 +1356,23 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31446 strings out of 474267
- 616816 string characters out of 5749990
- 1927555 words of memory out of 5000000
- 53022 multiletter control sequences out of 15000+600000
- 605210 words of font info for 118 fonts, out of 8000000 for 9000
+ 31572 strings out of 474267
+ 618750 string characters out of 5749990
+ 1929555 words of memory out of 5000000
+ 53118 multiletter control sequences out of 15000+600000
+ 616634 words of font info for 151 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,7n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (1 page, 78100 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on main.pdf (1 page, 91432 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
