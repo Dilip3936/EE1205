@@ -1,7 +1,7 @@
 %\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -50,7 +50,6 @@
 \title{GATE IN 43}
 \author{EE23BTECH11022 - G DILIP REDDY}
 \maketitle
-\newpage
 
 \bigskip
 
@@ -63,6 +62,7 @@ function
     \centering
     \includegraphics[width=\columnwidth]{figs/question.png}
 \end{figure}\\
+\renewcommand{\labelenumi}{\alph{enumi})}
 \begin{enumerate}
 \item $\frac{10000}{s^2+2s+10000}$\\
 \item $\frac{10000}{s^2+2s+10000}e^{-0.05s}$\\
@@ -73,5 +73,26 @@ function
 \\\\
 \solution
 %\fi
-
+Drawing bode plots for four options.\\
+From the graphs , the answer is b
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figs/A.png}
+    \caption{Bode plot of a $\frac{10000}{s^2+2s+10000}$}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figs/B.png}
+    \caption{Bode plot of b $\frac{10000e^{-0.05s}}{s^2+2s+10000}$}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figs/C.png}
+    \caption{Bode plot of c $\frac{10000e^{0.5\times10^{-12}s}}{s^2+2s+10000}$}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figs/D.png}
+    \caption{Bode plot of d $\frac{100}{s^2+2s+100}$}
+\end{figure}
 \end{document}
