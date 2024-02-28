@@ -74,7 +74,14 @@ function
 \solution
 %\fi
 Drawing bode plots for four options.\\
+\begin{align}
+\implies H\brak{s}=\frac{k}{s ^{2}+2s+k}e^{as}\\
+H\brak{j\omega}=\frac{k}{k-\omega ^2+2j\omega}e^{aj\omega}\\
+\abs{H\brak{j\omega}}=\frac{k}{\sqrt{\brak{k-\omega ^2}^2+4\omega^2}}\\
+\implies \phi\brak{H\brak{j\omega}}=j\brak{-\tan^{-1}{\brak{\frac{2\omega}{k-\omega^2}}-a\omega}}
+\end{align}
 From the graphs , the answer is b
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{figs/A.png}
@@ -83,16 +90,16 @@ From the graphs , the answer is b
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{figs/B.png}
-    \caption{Bode plot of b $\frac{10000e^{-0.05s}}{s^2+2s+10000}$}
+    \caption{Bode plot of a $\frac{10000e^{-0.05s}}{s^2+2s+10000}$}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{figs/C.png}
-    \caption{Bode plot of c $\frac{10000e^{0.5\times10^{-12}s}}{s^2+2s+10000}$}
+    \caption{Bode plot of a $\frac{10000e^{0.5\times10^{-12}s}}{s^2+2s+10000}$}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{figs/D.png}
-    \caption{Bode plot of d $\frac{100}{s^2+2s+100}$}
+    \caption{Bode plot of a $\frac{100}{s^2+2s+100}$}
 \end{figure}
 \end{document}
