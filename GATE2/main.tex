@@ -1,7 +1,7 @@
 %\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -47,7 +47,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{GATE 2021 ee 43}
+\title{GATE 2021 EE 43}
 \author{EE23BTECH11022 - G DILIP REDDY}
 \maketitle
 
@@ -62,17 +62,23 @@ Consider a continuous-time signal $x\brak{t}$ \,defined by $x\brak{t}=0$\,for $\
 \solution
 %\fi
 \begin{align}
-X\brak{\omega}&=\int_{-\infty}^{\infty}x\brak{t}e^{-j\omega t} dt\\
-X\brak{\omega}&=\int_{-1}^{1}\brak{1-\abs{t}}e^{-j\omega t} dt\\
-X\brak{\omega}&=\int_{-1}^{1}e^{-j\omega t} 
-dt - \int_{-1}^{1}\abs{t}e^{-j\omega t} dt\\
-X\brak{\omega}&=2\int_{0}^{1}\cos\brak{{\omega t}}
-dt - 2\int_{0}^{1}t\cos\brak{\omega t} dt\\
-X\brak{\omega}&=2\frac{\sin\brak{{\omega }}}{\omega}
-- 2\sbrak{\frac{\sin\brak{\omega }}{\omega}+\frac{\cos\brak{\omega }}{\omega^2}-\frac{1}{\omega ^2}}\\
-X\brak{\omega}&=2\frac{1-\cos\brak{\omega }}{\omega^2}\\
-X\brak{\omega}&=2\frac{2\sin^2\brak{\frac{\omega}{2}}}{\omega^2}\\
-\omega & \to 0 \implies X\brak{\omega}\to1
+X\brak{f}&=\int_{-\infty}^{\infty}x\brak{t}e^{-j2\pi f t} dt\\
+X\brak{f}&=\int_{-1}^{1}\brak{1-\abs{t}}e^{-j2\pi f t} dt\\
+X\brak{f}&=\int_{-1}^{1}e^{-j2\pi f t} 
+dt - \int_{-1}^{1}\abs{t}e^{-j2\pi f t} dt\\
+X\brak{f}&=2\int_{0}^{1}\cos\brak{{2\pi f t}}
+dt - 2\int_{0}^{1}t\cos\brak{2\pi f t} dt\\
+X\brak{f}&=2\frac{\sin\brak{{2\pi f }}}{2\pi f}
+- 2\sbrak{\frac{\sin\brak{2\pi f }}{2\pi f}+\frac{\cos\brak{2\pi f }}{\brak{2\pi f}^2}-\frac{1}{\brak{2\pi f }^2}}\\
+X\brak{f}&=2\frac{1-\cos\brak{2\pi f }}{\brak{2\pi f}^2}\\
+X\brak{f}&=2\frac{2\sin^2\brak{\frac{2\pi f}{2}}}{\brak{2\pi f}^2}\\
+X\brak{f}&=\frac{\sin^2\brak{\pi f}}{\brak{\pi f}^2}\\
+f& \to 0 \implies X\brak{f}\to1
 \end{align}
-Maximum of magnitude of $X\brak{\omega}=1$
+Maximum of magnitude of $X\brak{f}=1$
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{figs/graph.png}
+    \caption{plot of X(f)}
+\end{figure}
 \end{document}
