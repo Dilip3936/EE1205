@@ -1,21 +1,21 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the function
-def my_function(f):
-    return (np.sin(np.pi * f) / (np.pi * f))**2
+# Read data from file
+data = []
+with open('data.txt', 'r') as file:
+    for line in file:
+        x, y = map(float, line.split())
+        data.append((x, y))
 
-# Generate x values (frequencies)
-frequencies = np.linspace(-10, 10, 1000)  # You can adjust the range and density of points
-
-# Calculate corresponding y values
-values = my_function(frequencies)
+# Separate x and y values
+frequencies = [point[0] for point in data]
+values = [point[1] for point in data]
 
 # Plot the graph
 plt.figure(figsize=(8, 6))
-plt.plot(frequencies, values, label=r'X(f)',color='blue')
+plt.plot(frequencies, values, label=r'X(f)', color='blue')
 plt.xlabel('Frequency (f)')
-plt.ylabel('X(f)')
+plt.ylabel('Function Value')
 plt.grid(True)
 plt.legend()
-plt.savefig('graph.png')
+plt.savefig("graph.png")
