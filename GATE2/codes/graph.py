@@ -1,15 +1,12 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Read data from file
-data = []
-with open('data.txt', 'r') as file:
-    for line in file:
-        x, y = map(float, line.split())
-        data.append((x, y))
+# Load data from file using NumPy
+data = np.loadtxt('data.txt')
 
-# Separate x and y values
-frequencies = [point[0] for point in data]
-values = [point[1] for point in data]
+# Separate frequencies and values
+frequencies = data[:, 0]
+values = data[:, 1]
 
 # Plot the graph
 plt.figure(figsize=(8, 6))
