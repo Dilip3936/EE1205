@@ -11,8 +11,8 @@ values = data[:, 1]
 # Plot the graph
 plt.figure(figsize=(8, 6))
 plt.plot(frequencies, values, label=r'X(f)', color='blue')
-plt.xlabel('Frequency (f)')
-plt.ylabel('Function Value')
+plt.xlabel('$f$')
+plt.ylabel('$X(f)$')
 plt.grid(True)
 plt.legend()
 plt.savefig("graph.png")
